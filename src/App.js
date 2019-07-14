@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import styles from './App.module.css';
 import Person from './Person/Person';
 import Validation from './Validation/Validation';
 import CharComponent from './CharComponent/CharComponent';
@@ -86,10 +86,10 @@ lengthArray.map((character, arrId)=> {
 
 let classes = [];
 if (this.state.persons.length <= 2){
-  classes.push('red');
+  classes.push(styles.red);
 };
 if (this.state.persons.length <= 1) {
-  classes.push('bold');
+  classes.push(styles.bold);
 }
 
 if (this.state.showPersons) {
@@ -116,15 +116,11 @@ if (this.state.showPersons) {
                 />
               })}
             </div>
-            style.backgroundColor = 'red';
-            style[':hover'] = {
 
-              backgroundColor: 'salmon'
-            }
 }
     return (
 
-      <div className="App">
+      <div className={styles.App}>
         <h1>Hi, I'm a React App</h1>
         <p className = {classes.join(' ')}>This is really working!</p>
         <button
